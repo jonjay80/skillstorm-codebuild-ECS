@@ -2,7 +2,7 @@
 
 ## Steps:
 
-1) Download this GitHub repository as a .ZIP file.
+1) Download this GitHub repository as a .ZIP file. (click the green button **CODE** and choose **Download Zip**)
 2) Unzip files into a folder of your choosing on your local machine.
 3) Open the folder in VSCODE.
 -----------------------------------------------------------------------------------------------------------------------------------------
