@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t <NAME YOU WANT YOUR IMAGE FILE> .
+      - docker build -t <NAME OF YOUR IMAGE FILE> .
       - docker tag <NAME OF YOUR IMAGE FILE>:latest public.ecr.aws/q9r3s5p8/<NAME OF YOUR IMAGE FILE>:latest
   post_build:
     commands:
