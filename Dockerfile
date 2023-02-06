@@ -1,3 +1,4 @@
+# use python:3.8 if you want to pull image from DockerHub or public.ecr.aws/sam/build-python3.8:latest to pull from AWS SAM repo if using AWS services
 FROM public.ecr.aws/sam/build-python3.8:latest
 # set a directory for the app
 WORKDIR /usr/src/app
