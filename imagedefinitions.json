@@ -1,6 +1,6 @@
 [
     {
-        "name": "jjay-dockerdemo2",
-        "imageUri": "public.ecr.aws/q9r3s5p8/jjay-dockerdemo:latest"
+        "name": "<name of your container>",
+        "imageUri": "public.ecr.aws/q9r3s5p8/<name of your imagefile>:latest"
     }
 ]
