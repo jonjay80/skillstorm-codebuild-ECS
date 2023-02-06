@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        background: black;
+        color: white;
+      }
+      div.container {
+        width: fit-content;
+        margin: 50px auto;
+        border: 20px solid blue;
+        padding: 20px;
+        text-align: center;
+      }
+      h4 {
+        text-transform: uppercase;
+      }
+
+      div.button {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      #gifSpot {
+        height: 50%;
+      }
+
+    </style>
+    <script>
+      var images = [];
+      {% for image in images %}
+        images.push("{{ image }}");
+      {% endfor %}
+      console.log(images)
+      document.addEventListener(
+        "click",
+        function (event) {
+          if (!event.target.matches("#getNewGif")) return;
+          event.preventDefault();
+          var newGif = document.getElementById("gifSpot");
+          var randomGif = images[Math.floor(Math.random()*images.length)];
+          newGif.src = randomGif;
+          console.log(images);
+        },
+        false
+      );
+    </script>
+  </head>
+  <body>
+    <div class="button">
+      <button id="getNewGif" type="button">New Gif!</button>
+    </div>
+    <div class="container">
+      <h4>Michael Scott Gif Generator v0.99</h4>
+      <img id="gifSpot" src="https://media.tenor.com/bUOrNPAXcMEAAAAd/the-office-michael-scott.gif" />
+    </div>
+  </body>
+</html>

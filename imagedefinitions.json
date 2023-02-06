@@ -1,0 +1,6 @@
+[
+    {
+        "name": "jjay-dockerdemo2",
+        "imageUri": "public.ecr.aws/q9r3s5p8/jjay-dockerdemo:latest"
+    }
+]
