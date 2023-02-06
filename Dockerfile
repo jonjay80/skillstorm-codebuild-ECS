@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM public.ecr.aws/sam/build-python3.8:latest
 # set a directory for the app
 WORKDIR /usr/src/app
 # copy all the files to the container
