@@ -1,6 +1,6 @@
 [
     {
-        "name": "<name of your container>",
-        "imageUri": "public.ecr.aws/q9r3s5p8/<name of your imagefile>:latest"
+        "name": "<NAME OF YOUR CONTAINER>",
+        "imageUri": "public.ecr.aws/q9r3s5p8/<NAME OF YOUR IMAGE FILE>:latest"
     }
 ]
