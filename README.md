@@ -22,7 +22,7 @@ NOTE: I suggest opening a blank text file to copy and paste to, to keep track of
 -----------------------------------------------------------------------------------------------------------------------------------------
 13) Go back to VSCODE and open the file **'buildspec.yml'**
 14) Replace the four occurances of \<NAME OF YOUR IMAGE FILE\> with a name of your choosing. *example: abc-docker-image*
-15) This is the name of the image file **docker** will used to build when you run **CodeBuild**. CodeBuild uses **buildspec.yml** to know what to do.
+15) This is the name of the image file **docker** will use to build when you run **CodeBuild**. CodeBuild uses **buildspec.yml** to know what to build.
 -----------------------------------------------------------------------------------------------------------------------------------------
 16) Next open the file **imagedefinitions.json**
 17) Replace \<NAME OF YOUR CONTAINER\> with a name of your choosing. *example: abc-docker-container*
