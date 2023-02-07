@@ -21,7 +21,7 @@ NOTE: I suggest opening a blank text file to copy and paste to, to keep track of
 12) Give the repository a name.
 -----------------------------------------------------------------------------------------------------------------------------------------
 13) Go back to VSCODE and open the file **'buildspec.yml'**
-14) Replace the four occurances of \<NAME OF YOUR IMAGE FILE\> with a name of your choosing. *example: abc-docker-image*
+14) Replace the four occurances of \<NAME OF YOUR IMAGE FILE\> with a name of your choosing. *example: abc-docker-image:latest*
 15) This is the name of the image file **docker** will use to build when you run **CodeBuild**. CodeBuild uses **buildspec.yml** to know what to build.
 -----------------------------------------------------------------------------------------------------------------------------------------
 16) Next open the file **imagedefinitions.json**
