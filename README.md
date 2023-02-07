@@ -9,8 +9,8 @@ NOTE: I suggest opening a blank text file to copy and paste to, to keep track of
 3) Open the folder in VSCODE.
 -----------------------------------------------------------------------------------------------------------------------------------------
 4) In the AWS management console, choose IAM and create a new User.
-5) Choose 'Attach Policies Directly' and search for **'AWSCodeCommitPowerUser'**
-6) Click the check box next to the AWS managed policy named 'AWSCodeCommitPowerUser' and Save.
+5) Choose 'Attach Policies Directly' and search for *'AWSCodeCommitPowerUser'*
+6) Click the check box next to the AWS managed policy named *'AWSCodeCommitPowerUser'* and Save.
 -----------------------------------------------------------------------------------------------------------------------------------------
 7) Generate GIT credentials by clicking into the just created User.
 8) Under the **Security Credentials** tab, scroll down until you see **HTTPS Git credentials for AWS CodeCommit**.
@@ -57,8 +57,8 @@ git push -u origin main
 41) In the AWS management console, choose IAM -> Roles.
 42) In the search box, type the name of the role you created in Step 39.
 43) Click on the role and under the **Permissions** tab, click **Add Permissions -> Attach Policies**.
-44) In the **Search Box** type *AmazonElasticContainerRegistryPublicFullAccess* and check the box next to it.
-45) Clear the filters for the search box and then type in *CloudWatchLogsFullAccess* and check the box next to it.
+44) In the **Search Box** type *'AmazonElasticContainerRegistryPublicFullAccess'* and check the box next to it.
+45) Clear the filters for the search box and then type in *'CloudWatchLogsFullAccess'* and check the box next to it.
 46) Click **Attach Policies**
 -----------------------------------------------------------------------------------------------------------------------------------------
 47) In the AWS management console, choose **Elastic Container Registry -> Repositories -> Create Repository.**
