@@ -21,11 +21,11 @@ NOTE: I suggest opening a blank text file to copy and paste to, to keep track of
 12) Give the repository a name.
 -----------------------------------------------------------------------------------------------------------------------------------------
 13) Go back to VSCODE and open the file **'buildspec.yml'**
-14) Replace the four occurances of \<NAME OF YOUR IMAGE FILE\> with a name of your choosing. example: abc-docker-image
+14) Replace the four occurances of \<NAME OF YOUR IMAGE FILE\> with a name of your choosing. *example: abc-docker-image*
 15) This is the name of the image file **docker** will used to build when you run **CodeBuild**. CodeBuild uses **buildspec.yml** to know what to do.
 -----------------------------------------------------------------------------------------------------------------------------------------
 16) Next open the file **imagedefinitions.json**
-17) Replace \<NAME OF YOUR CONTAINER\> with a name of your choosing. example: abc-docker-container
+17) Replace \<NAME OF YOUR CONTAINER\> with a name of your choosing. *example: abc-docker-container*
 18) Replace \<NAME OF YOUR IMAGE FILE\> with the name you chose in Step 14.
 -----------------------------------------------------------------------------------------------------------------------------------------
 19) In the terminal in VSCODE, we will **connect** to the CodeCommit repository.
@@ -42,7 +42,7 @@ git push -u origin main
 28) In the AWS management console, choose CodeCommit and ensure your files were pushed to the repository successfully. You now have a **Git Repository** to store all of your source code.
 -----------------------------------------------------------------------------------------------------------------------------------------
 29) In the AWS management console, choose **CodeBuild -> Build Projects -> Create Build Project.**
-30) Give the project a name. example: abc-codebuild
+30) Give the project a name. *example: abc-codebuild*
 31) Under Source Provider choose **AWS CodeCommit**
 32) Under Repository choose your CodeCommit repository.
 33) Keep the Reference Type as Branch and choose your **main** branch in the dropdown.
@@ -51,7 +51,7 @@ git push -u origin main
 36) Choose **Standard** for the Runtime.
 37) Choose **aws/codebuild/amazonlinux2-x86_64-standard:4.0** (the last option in the dropdown) for Image.
 38) Check the box under **Privileged** that says *"Enable this flag if you want to build Docker images or want your builds to get elevated privileges".* This needs to be selected so you can build images with Docker.
-39) Create a new service role and give it a name. example abc-codebuild-service-role
+39) Create a new service role and give it a name. *example: abc-codebuild-service-role*
 40) Leave the rest as defaults and click **Create build project**
 -----------------------------------------------------------------------------------------------------------------------------------------
 41) In the AWS management console, choose IAM -> Roles.
