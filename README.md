@@ -70,6 +70,6 @@ git push -u origin main
 51) In the AWS management console, choose **CodeBuild -> Build Projects -> Click your build project**
 52) Click the **Start build** button and monitor the progress of the build.
 53) Click the **Phase Details** tab to ensure all of the phases *Succeeded*.
-![CodeBuild Phase Details](https://https://github.com/jonjay80/skillstorm-codebuild-ECS/images/CodeBuildPhaseDetails.png)
+![CodeBuild Phase Details](https://github.com/jonjay80/skillstorm-codebuild-ECS/blob/main/images/CodeBuildPhaseDetailsCapture.PNG)
 54) If you get any *Failed* statuses, click the **Build Logs** tab to review the logs and troubleshoot from there.
 55) 
