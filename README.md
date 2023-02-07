@@ -73,4 +73,34 @@ git push -u origin main
 53) Click the **Phase Details** tab to ensure all of the phases *Succeeded*.
 ![CodeBuild Phase Details](https://github.com/jonjay80/skillstorm-codebuild-ECS/blob/main/images/CodeBuildPhaseDetailsCapture.PNG)
 54) If you get any *Failed* statuses, click the **Build Logs** tab to review the logs and troubleshoot from there.
-55) 
+-----------------------------------------------------------------------------------------------------------------------------------------
+55) In the AWS management console, choose **Elastic Container Service -> Task Definitions -> Create new Task Definition**.
+56) Give the task definition a name.
+57) Under **Container Details**, for **Name** put your container name from Step 17. *example: abc-docker-container*
+58) Under **Image URI** put your location of your image file in Elastic Container Registry. You can find this URI in the AWS management console, **Elastic Container Registry -> Repositories -> Public** *example: public.ecr.aws/q9r3s5p8/abc-docker-image:latest*
+59) Under **Port mappings**, change the **Container Port** to 5000. We need this port mapping because our Python application exposes that port to use.
+60) Click **Next**. Ensure the **App environment** has *AWS Fargate(serverless)* chosen.
+61) Leave Operating system as *Linux/X86_64*. Change **CPU** to *.5vCPU*. Change **Memory** to *1 GB*. Click **Next**. Finally click **Create**.
+-----------------------------------------------------------------------------------------------------------------------------------------
+62) In the AWS management console, choose **Elastic Container Service -> Clusters -> Create Cluster**. 
+63) Give the Cluster a name of your choosing.
+64) Keep the **Default VPC** selected. Remove the *Private* subnets from the list and only have *Public* subnets selected. Click **Create**.
+----------------------------------------------------------------------------------------------------------------------------------------- 
+65) Click into your newly created **Cluster**.
+66) Under the **Services** tab, click **Create** to create a new Service for our ECS Cluster.
+67) Under **Compute Options** choose *Launch Type*, **Launch Type** leave *FARGATE*, **Platform Version** leave *LATEST*.
+68) Under **Application Type**, choose *Service*, **Family** choose the your *ECS Cluster Task Definition* you made in Step 56.
+69) Give your service a **name**. Leave **Service type** as *Replica*. Under **Desired Tasks** to *2* .
+70) Under **Load Balancing**, choose *Application Load Balancer* as the type. Create a new Load balancer and give it a name.
+71) Under **Choose container to load balance** choose your container you made. *example: abc-docker-container 5000:5000*.
+72) Create a new Listener and leave port 80 and leave protocol HTTP.
+73) Create a new target group and give it a name. Under **Health check grace period** enter *30*.
+74) Click **Create**.
+-----------------------------------------------------------------------------------------------------------------------------------------
+75) In the AWS management console, choose **CodePipeline -> Pipelines -> Create Pipeline**.
+76) Give the pipeline a name and leave the *Allow AWS CodePipeline to create a service role so it can be used with this new pipeline* *Checked*.
+77) Click **Next**.  Under **Source Provider** choose *AWS CodeCommit*, click into **Repository Name** and choose your repo, Click into **Branch name** and choose *main*. Click **Next**.
+78) Under **Build Provider**, choose *AWS CodeBuild*. Ensure the correct **Region**. Click into **Project Name** and choose your *CodeBuild* project. Click **Next**.
+79) Under **Deploy Provider** choose *Amazon ECS*. Ensure the correct **Region**. Click into **Cluster name** and choose your **ECS** cluster. Click into **Service name** and choose your **ECS Service**. Under **Image Defnitions file** type in *imagedefinitions.json*.
+80) Click **Next**. Click **Create Pipeline**.
+81) The pipeline will start.  *NOTE: You may run into an error with permissions, just retry after a couple of minutes.*
