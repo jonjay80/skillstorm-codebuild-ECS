@@ -43,17 +43,17 @@ git branch -M main
 git push -u origin main
 ```
 27) You will be prompted to enter your username and password.  Copy the username and password you generated in Step 10.
-28) In the AWS management console, choose CodeCommit and ensure your files were pushed to the repository successfully. You now have a **Git Repository** to store all of your source code.
+28) In the AWS management console, choose **CodeCommit -> Repositories** and ensure your files were pushed to the repository successfully. You now have a **Git Repository** to store all of your source code.
 ```
 If you get an error "fatal: unable to access ... The requested URL returned error: 403" 
 
 Troubleshoot as follows: 
 (Windows) In windows search for "Credential Manager", within Credential manager, choose Windows Credentials and 
-look under Generic Credentials and delete any line >that has "git:https://git-codecommit-us-east-1" in it.
+look under Generic Credentials and delete any line that has "git:https://git-codecommit-us-east-1" in it.
 
 (Mac) Open up your Keychain and look in the Keychains list for line similar to the one above and delete them.
 
-Try to push to CodeCommit after doing these steps.
+Try to push to CodeCommit after doing these steps. You should be prompted to enter your username and password now.
 ```
 -----------------------------------------------------------------------------------------------------------------------------------------
 29) In the AWS management console, choose **CodeBuild -> Build Projects -> Create Build Project.**
@@ -78,7 +78,7 @@ Try to push to CodeCommit after doing these steps.
 -----------------------------------------------------------------------------------------------------------------------------------------
 47) In the AWS management console, choose **Elastic Container Registry -> Repositories -> Create Repository.**
 48) Keep the Visibility Settings as **Public**.
-49) For the Repository Name enter in the name of your image file from Step 14. (this doesn't have to be the image file name but doing so keeps it less confusing)
+49) For the Repository Name enter in the name of your image file from Step 14. *example: abc-docker-image* (this doesn't have to be the image file name but doing so keeps it less confusing)
 50) Click **Create repository**.
 51) You now have an **Elastic Container Repository** where your Docker Image file can be stored when you run your **CodeBuild Build Project**.
 -----------------------------------------------------------------------------------------------------------------------------------------
