@@ -44,12 +44,14 @@ git push -u origin main
 ```
 27) You will be prompted to enter your username and password.  Copy the username and password you generated in Step 10.
 28) In the AWS management console, choose CodeCommit and ensure your files were pushed to the repository successfully. You now have a **Git Repository** to store all of your source code.
+```
 >  If you get an error "fatal: unable to access ... The requested URL returned error: 403" 
 >  Troubleshoot as follows: 
 >  (Windows) In windows search for "Credential Manager", within Credential manager, choose Windows Credentials and look under Generic Credentials and delete any 
 >  line >that has "git:https://git-codecommit-us-east-1" in it.
 >  (Mac) Open up your Keychain and look in the Keychains list for line similar to the one above and delete them.
 >  Try to push to CodeCommit after doing these steps.
+```
 -----------------------------------------------------------------------------------------------------------------------------------------
 29) In the AWS management console, choose **CodeBuild -> Build Projects -> Create Build Project.**
 30) Give the project a name. *example: abc-codebuild*
