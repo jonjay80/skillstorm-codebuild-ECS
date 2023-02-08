@@ -3,8 +3,11 @@
 
 NOTE: I suggest opening a blank text file to copy and paste to, to keep track of all of the names you will be using for the various repositories, images, containers, username, password, etc. You will need to refer to them in later steps.
 
+![CodePipeline Diagram](https://github.com/jonjay80/skillstorm-codebuild-ECS/blob/main/images/AWSCodePipelineDiagram.PNG)
+## Overview Diagram
+-----------------------------------------------------------------------------------------------------------------------------------------
 ## Steps:
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 1) Download this GitHub repository as a .ZIP file. (click the green button **CODE** and choose **Download Zip**)
 2) Unzip files into a folder of your choosing on your local machine.
 3) Open the folder in VSCODE.
