@@ -1,10 +1,11 @@
 # Skillstorm 
 # CodeCommit / CodeBuild / CodePipeline / ECR / ECS with Fargate demo
 
-NOTE: I suggest opening a blank text file to copy and paste to, to keep track of all of the names you will be using for the various repositories, images, containers, username, password, etc. You will need to refer to them in later steps.
 
 ![CodePipeline Diagram](https://github.com/jonjay80/skillstorm-codebuild-ECS/blob/main/images/AWSCodePipelineDiagram.PNG)
-## Overview Diagram
+
+
+NOTE: I suggest opening a blank text file to copy and paste to, to keep track of all of the names you will be using for the various repositories, images, containers, username, password, etc. You will need to refer to them in later steps.
 -----------------------------------------------------------------------------------------------------------------------------------------
 ## Steps:
 -----------------------------------------------------------------------------------------------------------------------------------------
