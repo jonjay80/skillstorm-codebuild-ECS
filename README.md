@@ -117,4 +117,5 @@ Try to push to CodeCommit after doing these steps. You should be prompted to ent
 78) Under **Build Provider**, choose *AWS CodeBuild*. Ensure the correct **Region**. Click into **Project Name** and choose your *CodeBuild* project. Click **Next**.
 79) Under **Deploy Provider** choose *Amazon ECS*. Ensure the correct **Region**. Click into **Cluster name** and choose your **ECS** cluster. Click into **Service name** and choose your **ECS Service**. Under **Image Defnitions file** type in *imagedefinitions.json*.
 80) Click **Next**. Click **Create Pipeline**.
-81) The pipeline will start.  *NOTE: You may run into an error with permissions, just retry after a couple of minutes.*
+81) The pipeline will start.  
+## *NOTE: You may run into an error with permissions, just wait a few moments and hit the Retry button.*
